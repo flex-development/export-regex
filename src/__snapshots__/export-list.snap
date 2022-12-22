@@ -1,0 +1,92 @@
+// Vitest Snapshot v1
+
+exports[`unit:EXPORT_LIST_REGEX > exports > should match named export(s) in multi-line statement 1`] = `
+{
+  "0": "export {
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+  "1": undefined,
+  "2": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+  "groups": {
+    "exports": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_LIST_REGEX > exports > should match named export(s) in single-line statement 1`] = `
+{
+  "0": "export { defineBuildConfig, type BuildConfig }",
+  "1": undefined,
+  "2": "{ defineBuildConfig, type BuildConfig }",
+  "groups": {
+    "exports": "{ defineBuildConfig, type BuildConfig }",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_LIST_REGEX > exports > should match named type export(s) in multi-line statement 1`] = `
+{
+  "0": "export type {
+  JsonObject,
+  LiteralUnion,
+  Nullable
+}",
+  "1": "type",
+  "2": "{
+  JsonObject,
+  LiteralUnion,
+  Nullable
+}",
+  "groups": {
+    "exports": "{
+  JsonObject,
+  LiteralUnion,
+  Nullable
+}",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_LIST_REGEX > exports > should match named type export(s) in single-line statement 1`] = `
+{
+  "0": "export type { default as Options }",
+  "1": "type",
+  "2": "{ default as Options }",
+  "groups": {
+    "exports": "{ default as Options }",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
