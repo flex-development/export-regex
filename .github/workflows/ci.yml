@@ -1,0 +1,102 @@
+# Continuous Integration
+#
+# References:
+#
+# - https://docs.github.com/actions/automating-builds-and-tests/building-and-testing-nodejs
+# - https://docs.github.com/actions/using-jobs/using-a-matrix-for-your-jobs
+# - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#pull_request
+# - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#push
+# - https://docs.github.com/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+# - https://github.com/actions/checkout
+# - https://github.com/actions/upload-artifact
+# - https://github.com/hmarr/debug-action
+
+---
+name: ci
+on:
+  pull_request:
+  push:
+    branches:
+      - feat/**
+      - hotfix/**
+      - main
+  workflow_dispatch:
+permissions:
+  packages: read
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  HUSKY: 0
+  REF: ${{ github.head_ref || github.ref_name }}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    if: |
+      github.event_name == 'pull_request' ||
+      github.event_name == 'workflow_dispatch' ||
+      !startsWith(github.event.head_commit.message, 'release:')
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 19
+          - 18
+          - 16
+          - 14
+    steps:
+      - id: checkout
+        name: Checkout ${{ env.REF }}
+        uses: actions/checkout@v3.2.0
+        with:
+          ref: ${{ env.REF }}
+      - id: node
+        name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3.5.1
+        with:
+          cache: yarn
+          node-version: ${{ matrix.node-version }}
+      - id: debug
+        name: Print environment variables and event payload
+        uses: hmarr/debug-action@v2.1.0
+      - id: yarn
+        name: Install dependencies
+        run: yarn --no-immutable
+      - id: format
+        name: Check code formatting
+        run: yarn check:format
+      - id: lint
+        name: Check lint status
+        run: yarn check:lint
+      - id: spelling
+        name: Check spelling
+        run: yarn check:spelling
+      - id: typecheck
+        name: Run typecheck
+        run: yarn check:types
+      - id: test
+        name: Run tests
+        run: yarn test:cov --segfault-retry=3
+      - id: pack
+        name: Pack project
+        run: yarn pack -o %s-%v.tgz
+        env:
+          NODE_ENV: production
+      - id: package-version
+        name: Get package version
+        run: echo "result=$(jq .version package.json -r)" >> $GITHUB_OUTPUT
+      - id: coverage
+        name: Archive coverage report
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: |
+            ${{ format('@{0}-{1}-{2}-lcov.info', github.repository_owner, github.event.repository.name, steps.package-version.outputs.result) }}
+          path: coverage/lcov.info
+      - id: archive
+        name: Archive production artifacts
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: |
+            ${{ format('@{0}-{1}-{2}', github.repository_owner, github.event.repository.name, steps.package-version.outputs.result) }}
+          path: '*.tgz'

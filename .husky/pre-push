@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Pre-Push Workflow
+#
+# References:
+#
+# - https://vitest.dev/guide/cli.html#changed
+
+yarn test --changed HEAD^
+yarn build
