@@ -3,4 +3,4 @@
  * @module export-regex
  */
 
-export {}
+export { default as EXPORT_AGGREGATE_REGEX } from './export-aggregate'

@@ -1,0 +1,130 @@
+// Vitest Snapshot v1
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named export(s) in multi-line statement 1`] = `
+{
+  "0": "export {
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+} from './lib'",
+  "1": undefined,
+  "2": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+  "3": "./lib",
+  "groups": {
+    "exports": "{
+  addFive,
+  addFour,
+  addThree,
+  addTwo,
+  squareFive,
+  squareFour,
+  squareThree,
+  squareTwo
+}",
+    "specifier": "./lib",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named export(s) in single-line statement 1`] = `
+{
+  "0": "export { defineBuildConfig, type BuildConfig } from \\"#src\\"",
+  "1": undefined,
+  "2": "{ defineBuildConfig, type BuildConfig }",
+  "3": "#src",
+  "groups": {
+    "exports": "{ defineBuildConfig, type BuildConfig }",
+    "specifier": "#src",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named type export(s) in multi-line statement 1`] = `
+{
+  "0": "export type {
+  JsonObject,
+  LiteralUnion,
+  Nullable
+} from '@flex-development/tutils'",
+  "1": "type",
+  "2": "{
+  JsonObject,
+  LiteralUnion,
+  Nullable
+}",
+  "3": "@flex-development/tutils",
+  "groups": {
+    "exports": "{
+  JsonObject,
+  LiteralUnion,
+  Nullable
+}",
+    "specifier": "@flex-development/tutils",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named type export(s) in single-line statement 1`] = `
+{
+  "0": "export type { default as Options } from \\"./options\\"",
+  "1": "type",
+  "2": "{ default as Options }",
+  "3": "./options",
+  "groups": {
+    "exports": "{ default as Options }",
+    "specifier": "./options",
+    "type": "type",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match namespace export 1`] = `
+{
+  "0": "export * from './interfaces'",
+  "1": undefined,
+  "2": "*",
+  "3": "./interfaces",
+  "groups": {
+    "exports": "*",
+    "specifier": "./interfaces",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match namespace export with alias 1`] = `
+{
+  "0": "export * as constants from \\"./constants\\"",
+  "1": undefined,
+  "2": "* as constants",
+  "3": "./constants",
+  "groups": {
+    "exports": "* as constants",
+    "specifier": "./constants",
+    "type": undefined,
+  },
+  "index": 0,
+}
+`;
