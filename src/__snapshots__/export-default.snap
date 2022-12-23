@@ -1,0 +1,301 @@
+// Vitest Snapshot v1
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export default abstract class [identifier] 1`] = `
+{
+  "0": "export default abstract class Pet",
+  "1": "abstract",
+  "2": "class",
+  "3": "Pet",
+  "groups": {
+    "exports": "Pet",
+    "kind": "class",
+    "modifiers": "abstract",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export default abstract class 1`] = `
+{
+  "0": "export default abstract class",
+  "1": "abstract",
+  "2": "class",
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": "class",
+    "modifiers": "abstract",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export default class [identifier] 1`] = `
+{
+  "0": "export default class Pet",
+  "1": undefined,
+  "2": "class",
+  "3": "Pet",
+  "groups": {
+    "exports": "Pet",
+    "kind": "class",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export default class 1`] = `
+{
+  "0": "export default class",
+  "1": undefined,
+  "2": "class",
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": "class",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > const enum > should match export default const enum [identifier] 1`] = `
+{
+  "0": "export default const enum Color",
+  "1": undefined,
+  "2": "const enum",
+  "3": "Color",
+  "groups": {
+    "exports": "Color",
+    "kind": "const enum",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > enum > should match export default enum [identifier] 1`] = `
+{
+  "0": "export default enum TokenKind",
+  "1": undefined,
+  "2": "enum",
+  "3": "TokenKind",
+  "groups": {
+    "exports": "TokenKind",
+    "kind": "enum",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > expressions > should match export default [identifier] 1`] = `
+{
+  "0": "export default foo",
+  "1": undefined,
+  "2": undefined,
+  "3": "foo",
+  "groups": {
+    "exports": "foo",
+    "kind": undefined,
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > expressions > should match export default 1`] = `
+{
+  "0": "export default",
+  "1": undefined,
+  "2": undefined,
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": undefined,
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > expressions > should match export default async 1`] = `
+{
+  "0": "export default async",
+  "1": "async",
+  "2": undefined,
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": undefined,
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export default async function [identifier] 1`] = `
+{
+  "0": "export default async function foo",
+  "1": "async",
+  "2": "function",
+  "3": "foo",
+  "groups": {
+    "exports": "foo",
+    "kind": "function",
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export default async function 1`] = `
+{
+  "0": "export default async function",
+  "1": "async",
+  "2": "function",
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": "function",
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export default function [identifier] 1`] = `
+{
+  "0": "export default function foo",
+  "1": undefined,
+  "2": "function",
+  "3": "foo",
+  "groups": {
+    "exports": "foo",
+    "kind": "function",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export default function 1`] = `
+{
+  "0": "export default function",
+  "1": undefined,
+  "2": "function",
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": "function",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export default async function* [identifier] 1`] = `
+{
+  "0": "export default async function* generator",
+  "1": "async",
+  "2": "function*",
+  "3": "generator",
+  "groups": {
+    "exports": "generator",
+    "kind": "function*",
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export default async function* 1`] = `
+{
+  "0": "export default async function*",
+  "1": "async",
+  "2": "function*",
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": "function*",
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export default function* [identifier] 1`] = `
+{
+  "0": "export default function* generator",
+  "1": undefined,
+  "2": "function*",
+  "3": "generator",
+  "groups": {
+    "exports": "generator",
+    "kind": "function*",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export default function* 1`] = `
+{
+  "0": "export default function*",
+  "1": undefined,
+  "2": "function*",
+  "3": undefined,
+  "groups": {
+    "exports": undefined,
+    "kind": "function*",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > interface > should match export default interface [identifier] 1`] = `
+{
+  "0": "export default interface IUser",
+  "1": undefined,
+  "2": "interface",
+  "3": "IUser",
+  "groups": {
+    "exports": "IUser",
+    "kind": "interface",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > namespace > should match export default namespace [identifier] 1`] = `
+{
+  "0": "export default namespace Utils",
+  "1": undefined,
+  "2": "namespace",
+  "3": "Utils",
+  "groups": {
+    "exports": "Utils",
+    "kind": "namespace",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > type > should match export default type [identifier] 1`] = `
+{
+  "0": "export default type Options",
+  "1": undefined,
+  "2": "type",
+  "3": "Options",
+  "groups": {
+    "exports": "Options",
+    "kind": "type",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
