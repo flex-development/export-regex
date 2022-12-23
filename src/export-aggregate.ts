@@ -6,6 +6,9 @@
 /**
  * Aggregate `export` statement regex. Ignores matches in comments.
  *
+ * @see https://regex101.com/r/JtvRUt
+ * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating
+ *
  * @example
  *  import { EXPORT_AGGREGATE_REGEX } from '@flex-development/export-regex'
  *  import { dedent } from 'ts-dedent'
@@ -64,9 +67,6 @@
  *  //     }
  *  //   }
  *  // ]
- *
- * @see https://regex101.com/r/JtvRUt
- * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating
  *
  * @const {RegExp} EXPORT_AGGREGATE_REGEX
  */

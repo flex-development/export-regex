@@ -6,6 +6,9 @@
 /**
  * List `export` statement regex. Ignores matches in comments.
  *
+ * @see https://regex101.com/r/KQEDdZ
+ * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#syntax
+ *
  * @example
  *  import { EXPORT_LIST_REGEX } from '@flex-development/export-regex'
  *  import { dedent } from 'ts-dedent'
@@ -46,9 +49,6 @@
  *  //     }
  *  //   }
  *  // ]
- *
- * @see https://regex101.com/r/KQEDdZ
- * @see https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#syntax
  *
  * @const {RegExp} EXPORT_LIST_REGEX
  */
