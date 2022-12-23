@@ -1,0 +1,432 @@
+// Vitest Snapshot v1
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > class > should match export abstract class [exports] 1`] = `
+{
+  "0": "export abstract class Pet",
+  "1": "abstract",
+  "2": "class",
+  "3": "Pet",
+  "groups": {
+    "declaration": "class",
+    "exports": "Pet",
+    "modifiers": "abstract",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > class > should match export class [exports] 1`] = `
+{
+  "0": "export class Pet",
+  "1": undefined,
+  "2": "class",
+  "3": "Pet",
+  "groups": {
+    "declaration": "class",
+    "exports": "Pet",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > class > should match export declare abstract class [exports] 1`] = `
+{
+  "0": "export declare abstract class Pet",
+  "1": "declare abstract",
+  "2": "class",
+  "3": "Pet",
+  "groups": {
+    "declaration": "class",
+    "exports": "Pet",
+    "modifiers": "declare abstract",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > const > should match export const [exports] 1`] = `
+[
+  {
+    "0": "export const IGNORE_PATTERNS",
+    "1": undefined,
+    "2": "const",
+    "3": "IGNORE_PATTERNS",
+    "groups": {
+      "declaration": "const",
+      "exports": "IGNORE_PATTERNS",
+      "modifiers": undefined,
+    },
+    "index": 1,
+  },
+  {
+    "0": "export const { name1, name2: bar } = o",
+    "1": undefined,
+    "2": "const",
+    "3": "{ name1, name2: bar }",
+    "groups": {
+      "declaration": "const",
+      "exports": "{ name1, name2: bar }",
+      "modifiers": undefined,
+    },
+    "index": 46,
+  },
+  {
+    "0": "export const [ name1, name2 ] = array",
+    "1": undefined,
+    "2": "const",
+    "3": "[ name1, name2 ]",
+    "groups": {
+      "declaration": "const",
+      "exports": "[ name1, name2 ]",
+      "modifiers": undefined,
+    },
+    "index": 86,
+  },
+]
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > const > should match export declare const [exports] 1`] = `
+{
+  "0": "export declare const IGNORE_PATTERNS",
+  "1": "declare",
+  "2": "const",
+  "3": "IGNORE_PATTERNS",
+  "groups": {
+    "declaration": "const",
+    "exports": "IGNORE_PATTERNS",
+    "modifiers": "declare",
+  },
+  "index": 1,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > const enum > should match export const enum [exports] 1`] = `
+{
+  "0": "export const enum Color",
+  "1": undefined,
+  "2": "const enum",
+  "3": "Color",
+  "groups": {
+    "declaration": "const enum",
+    "exports": "Color",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > const enum > should match export declare const enum [exports] 1`] = `
+{
+  "0": "export declare const enum Color",
+  "1": "declare",
+  "2": "const enum",
+  "3": "Color",
+  "groups": {
+    "declaration": "const enum",
+    "exports": "Color",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > enum > should match export declare enum [exports] 1`] = `
+{
+  "0": "export declare enum TokenKind",
+  "1": "declare",
+  "2": "enum",
+  "3": "TokenKind",
+  "groups": {
+    "declaration": "enum",
+    "exports": "TokenKind",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > enum > should match export enum [exports] 1`] = `
+{
+  "0": "export enum TokenKind",
+  "1": undefined,
+  "2": "enum",
+  "3": "TokenKind",
+  "groups": {
+    "declaration": "enum",
+    "exports": "TokenKind",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function > should match export async function [exports] 1`] = `
+{
+  "0": "export async function foo",
+  "1": "async",
+  "2": "function",
+  "3": "foo",
+  "groups": {
+    "declaration": "function",
+    "exports": "foo",
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function > should match export declare async function [exports] 1`] = `
+{
+  "0": "export async declare function foo",
+  "1": "async declare",
+  "2": "function",
+  "3": "foo",
+  "groups": {
+    "declaration": "function",
+    "exports": "foo",
+    "modifiers": "async declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function > should match export declare function [exports] 1`] = `
+{
+  "0": "export declare function foo",
+  "1": "declare",
+  "2": "function",
+  "3": "foo",
+  "groups": {
+    "declaration": "function",
+    "exports": "foo",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function > should match export function [exports] 1`] = `
+{
+  "0": "export function foo",
+  "1": undefined,
+  "2": "function",
+  "3": "foo",
+  "groups": {
+    "declaration": "function",
+    "exports": "foo",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function* > should match export async function* [exports] 1`] = `
+{
+  "0": "export async function* generator",
+  "1": "async",
+  "2": "function*",
+  "3": "generator",
+  "groups": {
+    "declaration": "function*",
+    "exports": "generator",
+    "modifiers": "async",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function* > should match export declare async function* [exports] 1`] = `
+{
+  "0": "export async declare function* generator",
+  "1": "async declare",
+  "2": "function*",
+  "3": "generator",
+  "groups": {
+    "declaration": "function*",
+    "exports": "generator",
+    "modifiers": "async declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function* > should match export declare function* [exports] 1`] = `
+{
+  "0": "export declare function* generator",
+  "1": "declare",
+  "2": "function*",
+  "3": "generator",
+  "groups": {
+    "declaration": "function*",
+    "exports": "generator",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > function* > should match export function* [exports] 1`] = `
+{
+  "0": "export function* generator",
+  "1": undefined,
+  "2": "function*",
+  "3": "generator",
+  "groups": {
+    "declaration": "function*",
+    "exports": "generator",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > interface > should match export declare interface [exports] 1`] = `
+{
+  "0": "export declare interface IUser",
+  "1": "declare",
+  "2": "interface",
+  "3": "IUser",
+  "groups": {
+    "declaration": "interface",
+    "exports": "IUser",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > interface > should match export interface [exports] 1`] = `
+{
+  "0": "export interface IUser",
+  "1": undefined,
+  "2": "interface",
+  "3": "IUser",
+  "groups": {
+    "declaration": "interface",
+    "exports": "IUser",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > let > should match export declare let [exports] 1`] = `
+{
+  "0": "export declare let name1, name2",
+  "1": "declare",
+  "2": "let",
+  "3": "name1, name2",
+  "groups": {
+    "declaration": "let",
+    "exports": "name1, name2",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > let > should match export let [exports] 1`] = `
+{
+  "0": "export let name1, name2",
+  "1": undefined,
+  "2": "let",
+  "3": "name1, name2",
+  "groups": {
+    "declaration": "let",
+    "exports": "name1, name2",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > namespace > should match export declare namespace [exports] 1`] = `
+{
+  "0": "export declare namespace Utils",
+  "1": "declare",
+  "2": "namespace",
+  "3": "Utils",
+  "groups": {
+    "declaration": "namespace",
+    "exports": "Utils",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > namespace > should match export namespace [exports] 1`] = `
+{
+  "0": "export namespace Utils",
+  "1": undefined,
+  "2": "namespace",
+  "3": "Utils",
+  "groups": {
+    "declaration": "namespace",
+    "exports": "Utils",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > type > should match export declare type [exports] 1`] = `
+{
+  "0": "export declare type Options",
+  "1": "declare",
+  "2": "type",
+  "3": "Options",
+  "groups": {
+    "declaration": "type",
+    "exports": "Options",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > type > should match export type [exports] 1`] = `
+{
+  "0": "export type Options",
+  "1": undefined,
+  "2": "type",
+  "3": "Options",
+  "groups": {
+    "declaration": "type",
+    "exports": "Options",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > var > should match export declare var [exports] 1`] = `
+{
+  "0": "export declare var name1, name2",
+  "1": "declare",
+  "2": "var",
+  "3": "name1, name2",
+  "groups": {
+    "declaration": "var",
+    "exports": "name1, name2",
+    "modifiers": "declare",
+  },
+  "index": 0,
+}
+`;
+
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > var > should match export var [exports] 1`] = `
+{
+  "0": "export var name1, name2",
+  "1": undefined,
+  "2": "var",
+  "3": "name1, name2",
+  "groups": {
+    "declaration": "var",
+    "exports": "name1, name2",
+    "modifiers": undefined,
+  },
+  "index": 0,
+}
+`;
