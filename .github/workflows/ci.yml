@@ -88,14 +88,14 @@ jobs:
         run: echo "result=$(jq .version package.json -r)" >> $GITHUB_OUTPUT
       - id: coverage
         name: Archive coverage report
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: |
             ${{ format('@{0}-{1}-{2}-lcov.info', github.repository_owner, github.event.repository.name, steps.package-version.outputs.result) }}
           path: coverage/lcov.info
       - id: archive
         name: Archive production artifacts
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: |
             ${{ format('@{0}-{1}-{2}', github.repository_owner, github.event.repository.name, steps.package-version.outputs.result) }}
