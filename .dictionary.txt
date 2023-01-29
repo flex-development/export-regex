@@ -24,6 +24,7 @@ nums
 nvmrc
 pcre
 pkgs
+pnpm
 preid
 syncer
 vates
