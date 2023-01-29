@@ -1,6 +1,7 @@
 # export-regex
 
 [![npm](https://img.shields.io/npm/v/@flex-development/export-regex.svg)](https://npmjs.com/package/@flex-development/export-regex)
+[![codecov](https://codecov.io/github/flex-development/export-regex/branch/main/graph/badge.svg?token=f79rIEL1sK)](https://codecov.io/github/flex-development/export-regex)
 [![module type: esm](https://img.shields.io/badge/module%20type-esm-brightgreen)](https://github.com/voxpelli/badges-cjs-esm)
 [![license](https://img.shields.io/github/license/flex-development/export-regex.svg)](LICENSE.md)
 [![conventional commits](https://img.shields.io/badge/-conventional%20commits-fe5196?logo=conventional-commits&logoColor=ffffff)](https://conventionalcommits.org/)
