@@ -1,12 +1,11 @@
 /// <reference types='vitest/globals' />
 
-interface ImportMetaEnv extends import('vitest/importMeta').ImportMetaEnv {
+interface ImportMetaEnv {
   readonly BASE_URL: string
-  readonly CI: 'false' | 'true'
   readonly DEV: '1' | import('@flex-development/tutils').EmptyString
+  readonly LINT_STAGED?: '0' | '1'
   readonly MODE: import('@flex-development/tutils').NodeEnv.TEST
   readonly NODE_ENV: import('@flex-development/tutils').NodeEnv.TEST
-  readonly NODE_OPTIONS: string
   readonly PROD: '1' | import('@flex-development/tutils').EmptyString
   readonly PWD: string
   readonly SSR: '1' | import('@flex-development/tutils').EmptyString

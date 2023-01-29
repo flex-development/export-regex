@@ -62,6 +62,55 @@
     "editor.wordWrapColumn": 100,
     "rewrap.wrappingColumn": 100
   },
+  "better-comments.highlightPlainText": true,
+  "better-comments.tags": [
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#ff2d00",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "!",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#3498db",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "?",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#474747",
+      "italic": false,
+      "strikethrough": true,
+      "tag": "//",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#ff8c00",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "todo",
+      "underline": false
+    },
+    {
+      "backgroundColor": "transparent",
+      "bold": false,
+      "color": "#98c379",
+      "italic": false,
+      "strikethrough": false,
+      "tag": "*",
+      "underline": false
+    }
+  ],
+  "breadcrumbs.enabled": true,
   "cSpell.enabled": true,
   "debug.showBreakpointsInOverviewRuler": true,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -77,13 +126,13 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
-  "editor.renderFinalNewline": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.guides.indentation": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.overviewRulerBorder": true,
+  "editor.renderFinalNewline": "off",
   "editor.rulers": [
     {
       // microsoft/vscode#166261
@@ -100,8 +149,10 @@
   },
   "emmet.showExpandedAbbreviation": "always",
   "emmet.triggerExpansionOnTab": true,
+  "eslint.alwaysShowStatus": true,
   "eslint.enable": true,
-  "eslint.nodePath": "node_modules/eslint",
+  "eslint.lintTask.enable": true,
+  "eslint.nodePath": "node_modules/.bin/eslint",
   "eslint.options": {
     "extensions": [
       "cjs",
@@ -116,8 +167,10 @@
     ],
     "overrideConfigFile": ".eslintrc.cjs"
   },
+  "eslint.packageManager": "yarn",
   "eslint.validate": [
     "graphql",
+    "javascript",
     "json",
     "jsonc",
     "markdown",
@@ -128,6 +181,7 @@
     "*.snap": "jest-snapshot",
     ".env.zsh": "shellscript",
     ".markdownlintignore": "ignore",
+    ".npmrc": "ini",
     "commit-msg": "shellscript",
     "pre-commit": "shellscript",
     "pre-push": "shellscript"
@@ -141,6 +195,21 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
+  "githubPullRequests.pullBranch": "never",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "javascript.format.semicolons": "remove",
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.preferences.useAliasesForRenames": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.suggest.completeJSDocs": true,
+  "javascript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "javascript.suggest.includeCompletionsForImportStatements": true,
+  "javascript.suggest.jsdoc.generateReturns": true,
+  "javascript.suggest.paths": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": true,
   "markdown.extension.toc.slugifyMode": "github",
   "markdown.extension.toc.updateOnSave": false,
   "markdownlint.ignore": ".markdownlintignore",
@@ -149,20 +218,54 @@
     "!**/node_modules",
     "!**/.git",
     "!**/CHANGELOG.md",
-    "!**/LICENSE.md"
+    "!**/LICENSE.md",
+    "!**/RELEASE_NOTES.md"
   ],
   "npm-intellisense.scanDevDependencies": true,
   "prettier.configPath": ".prettierrc.json",
   "prettier.enable": false,
   "prettier.prettierPath": "node_modules/prettier",
   "prettier.useEditorConfig": true,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.doubleSentenceSpacing": true,
+  "rewrap.reformat": true,
+  "rewrap.wrappingColumn": 80,
   "shellformat.flag": "-ci -fn -i=2 -sr",
   "shellformat.useEditorConfig": true,
+  "terminal.integrated.copyOnSelection": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "[ ]",
+    "[x]",
+    "@todo"
+  ],
+  "todo-tree.regex.regex": "((/?\\*|//|#|<!--|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.tree.scanMode": "workspace",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "typescript.format.insertSpaceAfterTypeAssertion": true,
+  "typescript.format.semicolons": "remove",
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.useAliasesForRenames": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.completeJSDocs": true,
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.suggest.includeCompletionsForImportStatements": true,
+  "typescript.suggest.jsdoc.generateReturns": true,
+  "typescript.suggest.paths": true,
   "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsserver.log": "verbose",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "versionlens.npm.dependencyProperties": ["dependencies", "devDependencies"],
+  "typescript.validate.enable": true,
+  "versionlens.npm.dependencyProperties": [
+    "dependencies",
+    "devDependencies",
+    "resolutions"
+  ],
   "vsicons.associations.files": [
     {
       "extensions": [".eslintrc.base.cjs"],
@@ -183,6 +286,11 @@
       "extensions": ["snap"],
       "format": "svg",
       "icon": "vitest"
+    },
+    {
+      "extensions": ["spec-d.ts"],
+      "format": "svg",
+      "icon": "testts"
     },
     {
       "extensions": ["yarnrc.yml"],
@@ -217,6 +325,8 @@
       "icon": "typings"
     }
   ],
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.enablePreview": false,
   "workbench.iconTheme": "vscode-icons",
   "yaml.schemas": {
     "https://json.schemastore.org/github-issue-config": ".github/ISSUE_TEMPLATE/config.yml",
