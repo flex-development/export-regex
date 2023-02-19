@@ -1154,10 +1154,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@faker-js/faker@npm:8.0.0-alpha.0":
-  version: 8.0.0-alpha.0
-  resolution: "@faker-js/faker@npm:8.0.0-alpha.0"
-  checksum: d803c4ac78d57e39c689271ad001d3136d502e5fc71fb7b517c5fd8b706194a96d3fbc0a08f6a5d5ed6ce474e644b6bff05a0df7e760d144510dcae839e6e252
+"@flex-development/builtin-modules@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@flex-development/builtin-modules@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fbuiltin-modules%2F1.0.0%2F7f6d30784550e9e03c3e93e9f846d958d016f1c9"
+  checksum: 9fc7155ef77d78b35f5e2d1cf401bb3806fa9ebeb5f0b75b4459bf531e2eb3e9cee28ecce3f7e8afad5add176a74ae1ab02dee50c37a9a7755be1a230c24e529
   languageName: node
   linkType: hard
 
@@ -1185,6 +1185,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@flex-development/errnode@npm:1.5.0":
+  version: 1.5.0
+  resolution: "@flex-development/errnode@npm:1.5.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Ferrnode%2F1.5.0%2F33dedbfaeb3139375e41d4382a8de53f9415a261"
+  dependencies:
+    "@flex-development/tutils": "npm:6.0.0-alpha.10"
+    node-inspect-extracted: "npm:2.0.0"
+  peerDependencies:
+    "@types/node": ">=14"
+  checksum: 884d5339afb245fdb3e635ba599e373ba1dd9f68e789c796817fe4fbe15317fb0192f49684b524c3baba1d4b70934799a5b353439543f29ee36b513d63e53bfa
+  languageName: node
+  linkType: hard
+
 "@flex-development/export-regex@npm:1.0.0":
   version: 1.0.0
   resolution: "@flex-development/export-regex@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fexport-regex%2F1.0.0%2Fee7486c94c3ecbb392ae3beff0c9ecc4f1ce7282"
@@ -1198,10 +1210,11 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:17.4.3"
     "@commitlint/config-conventional": "npm:17.4.3"
-    "@faker-js/faker": "npm:8.0.0-alpha.0"
     "@flex-development/mkbuild": "npm:1.0.0-alpha.9"
-    "@flex-development/mlly": "npm:1.0.0-alpha.7"
-    "@flex-development/tutils": "npm:6.0.0-alpha.9"
+    "@flex-development/mlly": "npm:1.0.0-alpha.11"
+    "@flex-development/pathe": "npm:1.0.3"
+    "@flex-development/tsconfig-utils": "npm:1.1.1"
+    "@flex-development/tutils": "npm:6.0.0-alpha.10"
     "@graphql-eslint/eslint-plugin": "npm:3.16.0"
     "@types/chai": "npm:4.3.4"
     "@types/conventional-changelog": "npm:3.1.1"
@@ -1231,6 +1244,7 @@ __metadata:
     conventional-recommended-bump: "npm:6.1.0"
     cross-env: "npm:7.0.3"
     cspell: "npm:6.26.3"
+    dateformat: "npm:5.0.3"
     esbuild: "npm:0.17.8"
     eslint: "npm:8.34.0"
     eslint-config-prettier: "npm:8.6.0"
@@ -1256,12 +1270,11 @@ __metadata:
     node-notifier: "npm:10.0.1"
     prettier: "npm:2.8.4"
     prettier-plugin-sh: "npm:0.12.8"
-    pretty-format: "npm:29.4.3"
     radash: "npm:10.7.0"
     sade: "npm:1.8.1"
     semver: "npm:7.3.8"
     serve: "npm:14.2.0"
-    tempfile: "npm:4.0.0"
+    tempfile: "npm:5.0.0"
     trash-cli: "npm:5.0.0"
     ts-dedent: "npm:2.2.0"
     typescript: "npm:5.0.0-dev.20230128"
@@ -1285,6 +1298,17 @@ __metadata:
   version: 1.0.1
   resolution: "@flex-development/is-builtin@npm:1.0.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fis-builtin%2F1.0.1%2Fa67edcfa3b5642f100fa7a1647f62e78641ca015"
   checksum: f8e25c26ab4e69381f9dcc2cd4af8f4c5aa4b023951118b140827493cc6803eef333d51eece9735029389ae0433f71c636f2db9581bfccab3e3ef635892491d1
+  languageName: node
+  linkType: hard
+
+"@flex-development/is-builtin@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@flex-development/is-builtin@npm:2.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fis-builtin%2F2.0.0%2F898339bf7e2f10df74d1472e651f43fca8b746bf"
+  dependencies:
+    "@flex-development/builtin-modules": "npm:1.0.0"
+  peerDependencies:
+    "@types/node": ">=14.18.36"
+  checksum: cd331f46528c0ccbd3f2a52fa5660b41a0109b28b9ad54e960de1401904f6a22eb0f472a82dc4aca4391c5b4b3f9f38344c3a415bbb655d591d121db79281f7a
   languageName: node
   linkType: hard
 
@@ -1314,6 +1338,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@flex-development/mlly@npm:1.0.0-alpha.10":
+  version: 1.0.0-alpha.10
+  resolution: "@flex-development/mlly@npm:1.0.0-alpha.10::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fmlly%2F1.0.0-alpha.10%2F6e84e05b66e57a92d750539044617fce7304b80f"
+  dependencies:
+    "@flex-development/errnode": "npm:1.4.0"
+    "@flex-development/export-regex": "npm:1.0.0"
+    "@flex-development/import-regex": "npm:2.0.1"
+    "@flex-development/is-builtin": "npm:2.0.0"
+    "@flex-development/pathe": "npm:1.0.3"
+    "@flex-development/pkg-types": "npm:2.0.0"
+    "@flex-development/tutils": "npm:6.0.0-alpha.9"
+  peerDependencies:
+    "@types/node": ">=14.17.0"
+    node-fetch: ">=3.3.0"
+  checksum: 198d01ebe2c226b9df0aecb35eaf4e1bc56dc87a07ac809b5c5b9a8b88a35382a90837ee4c295f0a598588c3b6c6affb9418b59f0d8ce2e806c4179aa4ad4c06
+  languageName: node
+  linkType: hard
+
+"@flex-development/mlly@npm:1.0.0-alpha.11":
+  version: 1.0.0-alpha.11
+  resolution: "@flex-development/mlly@npm:1.0.0-alpha.11::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fmlly%2F1.0.0-alpha.11%2F4801f76b2e43ae5f14be38212e22c43cf335af48"
+  dependencies:
+    "@flex-development/errnode": "npm:1.4.0"
+    "@flex-development/export-regex": "npm:1.0.0"
+    "@flex-development/import-regex": "npm:2.0.1"
+    "@flex-development/is-builtin": "npm:2.0.0"
+    "@flex-development/pathe": "npm:1.0.3"
+    "@flex-development/pkg-types": "npm:2.0.0"
+    "@flex-development/tutils": "npm:6.0.0-alpha.9"
+  peerDependencies:
+    "@types/node": ">=14.17.0"
+    node-fetch: ">=3.3.0"
+  checksum: 8f7843719a5002f73bac76b250168e7a9092b2e093c8566c379b396de6f12af84243b54a4401bb76fdd58c2b455d942455e777bc6bb6c407910eb61d962d4aac
+  languageName: node
+  linkType: hard
+
 "@flex-development/mlly@npm:1.0.0-alpha.2":
   version: 1.0.0-alpha.2
   resolution: "@flex-development/mlly@npm:1.0.0-alpha.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fmlly%2F1.0.0-alpha.2%2F5582d4ecf84ae2eb149f24af4783dac3e01948fc"
@@ -1328,24 +1388,6 @@ __metadata:
   peerDependencies:
     typescript: "*"
   checksum: ec8cca3db4d9602ecb61c72e7a23722e57a9c09920bb7c6decf66f3b545f48dbdc58f32057a8e8c85644761428a0cb5a53382c2103656e6aa20eb1e39deef32e
-  languageName: node
-  linkType: hard
-
-"@flex-development/mlly@npm:1.0.0-alpha.7":
-  version: 1.0.0-alpha.7
-  resolution: "@flex-development/mlly@npm:1.0.0-alpha.7::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Fmlly%2F1.0.0-alpha.7%2Fbdae2951ec1271fd5fd59dcafbb68e95d1aa42ad"
-  dependencies:
-    "@flex-development/errnode": "npm:1.4.0"
-    "@flex-development/export-regex": "npm:1.0.0"
-    "@flex-development/import-regex": "npm:2.0.1"
-    "@flex-development/is-builtin": "npm:1.0.1"
-    "@flex-development/pathe": "npm:1.0.3"
-    "@flex-development/pkg-types": "npm:2.0.0"
-    "@flex-development/tutils": "npm:6.0.0-alpha.9"
-  peerDependencies:
-    "@types/node": ">=14.17.0"
-    node-fetch: ">=3.3.0"
-  checksum: d6252565848a3e4d1ca2f257fad894b10626eae8c4e108a52f7317cffd8d145ef36b6247a38b139fb13a8262cb3aa6543344c107e0a2363392dc0b2d425e9a4b
   languageName: node
   linkType: hard
 
@@ -1368,12 +1410,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@flex-development/tutils@npm:6.0.0-alpha.9":
-  version: 6.0.0-alpha.9
-  resolution: "@flex-development/tutils@npm:6.0.0-alpha.9::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Ftutils%2F6.0.0-alpha.9%2F596608be55ad251320e2ee22335f688e41fa49e3"
+"@flex-development/tsconfig-types@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@flex-development/tsconfig-types@npm:3.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Ftsconfig-types%2F3.2.0%2Fe49eb5faa42583a340fdff7c9ec64ac5feaf4529"
+  dependencies:
+    "@flex-development/pkg-types": "npm:2.0.0"
+    "@flex-development/tutils": "npm:6.0.0-alpha.10"
+  checksum: 3955eb124d092798c32f3d72f8b9c79e97464ad3f20521b448f1432a64762f939f04fb983299d5d38c5e0963ab4efad71f9e262a27101cc4e571e1e50f5afdf8
+  languageName: node
+  linkType: hard
+
+"@flex-development/tsconfig-utils@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@flex-development/tsconfig-utils@npm:1.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Ftsconfig-utils%2F1.1.1%2Ffe7f9d391c9d4f0d8d2c31ab11bd36aae172d7da"
+  dependencies:
+    "@flex-development/errnode": "npm:1.5.0"
+    "@flex-development/mlly": "npm:1.0.0-alpha.10"
+    "@flex-development/pathe": "npm:1.0.3"
+    "@flex-development/tsconfig-types": "npm:3.2.0"
+    "@flex-development/tutils": "npm:6.0.0-alpha.10"
+    merge-anything: "npm:5.1.4"
+    sort-keys: "npm:5.0.0"
+    strip-bom: "npm:5.0.0"
+    strip-json-comments: "npm:5.0.0"
+  peerDependencies:
+    "@types/node": ">=14.18.36"
+    typescript: ">=4.7"
+  checksum: 4a5cd5d2c2e89766ef036b834f0cb36f4c4d3ac1a7340efb8f15fd7448dace057d77756f49305af4a5b202f6d3a05db20680517b60af7e905a40ff7f3d1a6d2d
+  languageName: node
+  linkType: hard
+
+"@flex-development/tutils@npm:6.0.0-alpha.10":
+  version: 6.0.0-alpha.10
+  resolution: "@flex-development/tutils@npm:6.0.0-alpha.10::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40flex-development%2Ftutils%2F6.0.0-alpha.10%2Fb2085f42d62aedfabfae2ed016c0cc5c47192f81"
   peerDependencies:
     typescript: ">=4.7"
-  checksum: 0e206ba29c79f484bf0be338a66ceeeaf525c8ed49974b5784ba139b47fb433a888d3cc698b24abd0a049c36162af15ea638b008baa1d3e04883b111a33a727b
+  checksum: 372d2fd3e36f75cf7f9ea80e3e95cbd99f673dd114301f610a29e7acf12f589342c1e84c0139c8aa7cac1bcae2c7c1db2cb1302bae55da9d2fb33ae32b5c2a1b
   languageName: node
   linkType: hard
 
@@ -1711,15 +1783,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/schemas@npm:^29.4.3":
-  version: 29.4.3
-  resolution: "@jest/schemas@npm:29.4.3"
-  dependencies:
-    "@sinclair/typebox": "npm:^0.25.16"
-  checksum: 8f80ca480298411120052fcea19fd0ebee0cd148b5409ae46e93c9f7dc34e1e31147bde3eca1d0c120cabbe9c95273799eaf170f397cd8a4b31dbd3f2525c392
-  languageName: node
-  linkType: hard
-
 "@jridgewell/gen-mapping@npm:^0.3.2":
   version: 0.3.2
   resolution: "@jridgewell/gen-mapping@npm:0.3.2"
@@ -1907,13 +1970,6 @@ __metadata:
   version: 3.0.4
   resolution: "@repeaterjs/repeater@npm:3.0.4"
   checksum: 86a89cbd91055e912e80334ded2ae5c44408747483d5ef237b5f72640e4905c6ec34d969ef7423a020fa49a28a9e28528dfdefabe4bf76ec84c1afaedfc777d2
-  languageName: node
-  linkType: hard
-
-"@sinclair/typebox@npm:^0.25.16":
-  version: 0.25.21
-  resolution: "@sinclair/typebox@npm:0.25.21"
-  checksum: 16fdf623cc7c19e4195ee79858febf480f20dd3cff47e1b103163d534d94f4ee02dc6bf372d18d100c08a5bfecfc3865f5e59759cc99c11042e103ff8971b3cd
   languageName: node
   linkType: hard
 
@@ -3801,6 +3857,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dateformat@npm:5.0.3":
+  version: 5.0.3
+  resolution: "dateformat@npm:5.0.3"
+  checksum: 2220af3a5549a06253f00ecebf20f54d6515ead6108b6fe45ed5beef17ce63cbf3d7946d9e9e4fba736ba342e0f4420352d14b4547a9f3ad70adc2afad40ccc1
+  languageName: node
+  linkType: hard
+
 "dateformat@npm:^3.0.0":
   version: 3.0.3
   resolution: "dateformat@npm:3.0.3"
@@ -5657,6 +5720,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-obj@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "is-plain-obj@npm:4.1.0"
+  checksum: 9d6bfe46ad30eda62cc2f0caec2ee980257a84a0a003523588c8c0e5eb33b6e42e73910f42c323490bfdfdd1bf7fd7854e8f156c275da7c12bebebb1be11c73a
+  languageName: node
+  linkType: hard
+
 "is-port-reachable@npm:4.0.0":
   version: 4.0.0
   resolution: "is-port-reachable@npm:4.0.0"
@@ -5698,6 +5768,13 @@ __metadata:
   version: 0.1.0
   resolution: "is-unicode-supported@npm:0.1.0"
   checksum: 89a336ffc0aaf907bb1072bd5e8aa7187076620d0099607084911a733a055a52712257d619b2ab2031f6f0eb9ba886504384ebe218a6737d9bac734e6baaa736
+  languageName: node
+  linkType: hard
+
+"is-what@npm:^4.1.8":
+  version: 4.1.8
+  resolution: "is-what@npm:4.1.8"
+  checksum: c2e9f829658980ab7bc0d21be714e9683bef7a48b76e412792135f333105f940098a77258704d352d794f7766def0da36549ce6080d1cc3c8e1f3c45a728c8db
   languageName: node
   linkType: hard
 
@@ -6329,6 +6406,15 @@ __metadata:
     type-fest: "npm:^0.18.0"
     yargs-parser: "npm:^20.2.3"
   checksum: e36c879078e6478281fb5ce3dbb15f5b960f2694870e5c12213ab8ca9c3410aadf6f9615b0004a643297bad5e1d5faa5f139fd698add26ad5945a095905e9628
+  languageName: node
+  linkType: hard
+
+"merge-anything@npm:5.1.4":
+  version: 5.1.4
+  resolution: "merge-anything@npm:5.1.4"
+  dependencies:
+    is-what: "npm:^4.1.8"
+  checksum: 489fbf11bb7455e397a59bb1ed46e577308d6822b26c81ca204974f251c1e30b0f8586910195a59769c3732b33d6026f254031c05f77d54c99dcc160b35cb9a4
   languageName: node
   linkType: hard
 
@@ -7350,17 +7436,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:29.4.3":
-  version: 29.4.3
-  resolution: "pretty-format@npm:29.4.3"
-  dependencies:
-    "@jest/schemas": "npm:^29.4.3"
-    ansi-styles: "npm:^5.0.0"
-    react-is: "npm:^18.0.0"
-  checksum: e48f95576acece3bf85bd2244fa8f40728ee53d20ee737de9b2578b225a9ddc7b869f755c8f7cce07bb29c13d46fb5fedc71deac0aaffb1593d06cf09427eb61
-  languageName: node
-  linkType: hard
-
 "pretty-format@npm:^27.5.1":
   version: 27.5.1
   resolution: "pretty-format@npm:27.5.1"
@@ -7496,13 +7571,6 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 24af7af3abd0bf94d4eb018a70db25fd4e23648eec7bb8b203bf59e24a715ac4eec8279939e15a4d90cbad19ed6be243a0f2c9aa0b1faec0a1c102d9c89ca3f9
-  languageName: node
-  linkType: hard
-
-"react-is@npm:^18.0.0":
-  version: 18.2.0
-  resolution: "react-is@npm:18.2.0"
-  checksum: f542f0effed3f89b4faa237bf56e746d437c9dba4ed1039a2ba6e6fcb463244300b8f3c17d8e610e76476a626c4d97ee4c2ed7a5b5d64e2b2e2d7b2144816ac8
   languageName: node
   linkType: hard
 
@@ -8105,6 +8173,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sort-keys@npm:5.0.0":
+  version: 5.0.0
+  resolution: "sort-keys@npm:5.0.0"
+  dependencies:
+    is-plain-obj: "npm:^4.0.0"
+  checksum: f8a0a3e63f2c1a30921b8693ac785f974dd496e9e849f39685c4ce9f5901fc0f597226130668f4d1b95cf4c5a1aab4744802713428ef4057fd5b9257f0c6dee8
+  languageName: node
+  linkType: hard
+
 "source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
@@ -8283,6 +8360,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-bom@npm:5.0.0":
+  version: 5.0.0
+  resolution: "strip-bom@npm:5.0.0"
+  checksum: 66cc7a869ae43ff0d6b9f26e7f623495cbf8ae6062ef9425f71d507009114098591b1c3468288695374f941b69a0129300fb3837859377e73cddfb1266df2216
+  languageName: node
+  linkType: hard
+
 "strip-bom@npm:^3.0.0":
   version: 3.0.0
   resolution: "strip-bom@npm:3.0.0"
@@ -8319,6 +8403,13 @@ __metadata:
   dependencies:
     min-indent: "npm:^1.0.1"
   checksum: 09f7f4debccccec3879131a1d688ddb39d6ce412c07fbda6008b1ebe24691f79b2f565ac4b9299f6a6dd91ed877e70118777bbc629c9af3bfeafe88b8b75ab92
+  languageName: node
+  linkType: hard
+
+"strip-json-comments@npm:5.0.0":
+  version: 5.0.0
+  resolution: "strip-json-comments@npm:5.0.0"
+  checksum: 3987fe7ac03f1f912375b63bfa010c54cfcf93b464eead789bd9deb3911bcf8fdaa6d3335e20915a7debbe76754b8bba18c13568e7c27946c21bbda117567666
   languageName: node
   linkType: hard
 
@@ -8394,20 +8485,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"temp-dir@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "temp-dir@npm:2.0.0"
-  checksum: 0b97706876e9982bb5f2bf8c1e040d087ec48051f7d91fe9f460bd8e5a1c833de89c6039e2e402b7388f4096c896392193082f5d78b8d4c89976edead9a88ce0
+"temp-dir@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "temp-dir@npm:3.0.0"
+  checksum: 9a4639ac5a3964e95b2497e71dbbf40b2808c0d3367509e675314f09078a5cce9381ba1c23c1b47023892816cdea716574e6fd3b4b9124e2dc00f7400b535bfa
   languageName: node
   linkType: hard
 
-"tempfile@npm:4.0.0":
-  version: 4.0.0
-  resolution: "tempfile@npm:4.0.0"
+"tempfile@npm:5.0.0":
+  version: 5.0.0
+  resolution: "tempfile@npm:5.0.0"
   dependencies:
-    temp-dir: "npm:^2.0.0"
-    uuid: "npm:^8.3.2"
-  checksum: 0064ea87faebb10950adb130b043ccf6306d3f10afc041674b67f1b14fbcb799e8962be588ad1eb225781af1427351195f2835181e22f9631766dd71615d971b
+    temp-dir: "npm:^3.0.0"
+  checksum: 5bec775cba3d6f77856a23b2c9928da8c4eeae404f7dccc2df908c28b2c517ae66e1fb9aa937d5d2d6b5b5b99bda606e8e946d04b3c23de07081316ead2c026c
   languageName: node
   linkType: hard
 
