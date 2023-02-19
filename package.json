@@ -70,7 +70,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.3",
     "@commitlint/config-conventional": "17.4.3",
-    "@flex-development/mkbuild": "1.0.0-alpha.9",
+    "@flex-development/mkbuild": "1.0.0-alpha.13",
     "@flex-development/mlly": "1.0.0-alpha.11",
     "@flex-development/pathe": "1.0.3",
     "@flex-development/tsconfig-utils": "1.1.1",
@@ -84,7 +84,6 @@
     "@types/conventional-recommended-bump": "6.1.0",
     "@types/dateformat": "5.0.0",
     "@types/eslint": "8.21.1",
-    "@types/fs-extra": "11.0.1",
     "@types/git-raw-commits": "2.0.1",
     "@types/is-ci": "3.0.0",
     "@types/node-notifier": "8.0.2",
