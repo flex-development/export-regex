@@ -53,6 +53,6 @@
  * @const {RegExp} EXPORT_LIST_REGEX
  */
 const EXPORT_LIST_REGEX: RegExp =
-  /(?<=^|[\n;])export(?:(?:\s+(?<type>type)\s*)|\s*)(?<exports>{[\w\t\n\r "$'*,./{}-]+?})/g
+  /(?<=^|[\n;](?:[\t ]*(?:\w+ )?)?)export(?:(?:\s+(?<type>type)\s*)|\s*)(?<exports>{[\w\t\n\r "$'*,./{}-]+?})(?=;?[\t\n;]*?(?!(?:\n*\/\/)|(?:\n*\/\*)|(?:\s*from.*?)))/g
 
 export default EXPORT_LIST_REGEX

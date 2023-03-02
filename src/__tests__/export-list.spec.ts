@@ -11,6 +11,23 @@ describe('unit:EXPORT_LIST_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
+  it('should ignore match in aggregate export statement', () => {
+    // Arrange
+    const code = dedent`
+      export { default } from './make'
+      export {
+        DEFAULTS,
+        plugin as default,
+        type Options
+      } from './plugin'
+      export type { Config, Result } from './interfaces'
+      export type { default as Options } from './options'
+    `
+
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
+
   it('should ignore match in multi-line comment', () => {
     // Arrange
     const code = dedent`
