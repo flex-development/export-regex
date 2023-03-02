@@ -6,30 +6,22 @@
 
 import * as mlly from '@flex-development/mlly'
 import * as pathe from '@flex-development/pathe'
-import * as tscu from '@flex-development/tsconfig-utils'
 import * as tutils from '@flex-development/tutils'
 import * as esbuild from 'esbuild'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import tsconfig from './tsconfig.json' assert { type: 'json' }
 
 // add support for extensionless files in "bin" scripts
 // https://github.com/nodejs/modules/issues/488
 mlly.EXTENSION_FORMAT_MAP.set('', mlly.Format.COMMONJS)
 
 /**
- * URL of tsconfig file.
+ * URL of current working directory.
  *
  * @type {import('node:url').URL}
- * @const tsconfig
+ * @const cwd
  */
-const tsconfig = mlly.toURL('tsconfig.json')
-
-/**
- * TypeScript compiler options.
- *
- * @type {tscu.CompilerOptions}
- * @const compilerOptions
- */
-const compilerOptions = tscu.loadCompilerOptions(tsconfig)
+const cwd = pathToFileURL(tsconfig.compilerOptions.baseUrl)
 
 /**
  * Determines how the module at the given `url` should be interpreted,
@@ -69,12 +61,19 @@ export const load = async (url, context) => {
 
   // transform typescript files
   if (/^\.(?:cts|mts|tsx?)$/.test(ext) && !/\.d\.(?:cts|mts|ts)$/.test(url)) {
+    // push require condition for .cts files and update format
+    if (ext === '.cts') {
+      context.conditions = context.conditions ?? []
+      context.conditions.unshift('require', 'node')
+      context.format = mlly.Format.MODULE
+    }
+
     // resolve path aliases
-    source = await tscu.resolvePaths(source, {
+    source = await mlly.resolveAliases(source, {
+      aliases: tsconfig.compilerOptions.paths,
       conditions: context.conditions,
-      ext: '',
-      parent: url,
-      tsconfig
+      cwd,
+      parent: url
     })
 
     // resolve modules
@@ -85,13 +84,13 @@ export const load = async (url, context) => {
 
     // transpile source code
     const { code } = await esbuild.transform(source, {
-      format: ext === '.cts' ? 'cjs' : 'esm',
+      format: 'esm',
       loader: ext.slice(/^\.[cm]/.test(ext) ? 2 : 1),
       minify: false,
       sourcefile: fileURLToPath(url),
       sourcemap: 'inline',
       target: `node${process.versions.node}`,
-      tsconfigRaw: { compilerOptions }
+      tsconfigRaw: { compilerOptions: tsconfig.compilerOptions }
     })
 
     // set source code to transpiled source
@@ -117,16 +116,15 @@ export const load = async (url, context) => {
  * @param {string} specifier - Module specifier
  * @param {ResolveHookContext} context - Hook context
  * @return {Promise<ResolveHookResult>} Hook result
- * @throws {Error}
  */
 export const resolve = async (specifier, context) => {
   const { conditions, parentURL: parent } = context
 
   // resolve path alias
   specifier = await mlly.resolveAlias(specifier, {
-    aliases: tscu.loadPaths(tsconfig),
+    aliases: tsconfig.compilerOptions.paths,
     conditions,
-    cwd: pathToFileURL(compilerOptions.baseUrl),
+    cwd,
     parent
   })
 
