@@ -3,7 +3,6 @@
  * @module export-regex/tests/unit/aggregate
  */
 
-import { omit } from 'radash'
 import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../export-aggregate'
 
@@ -12,23 +11,21 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
-  describe('comments', () => {
-    it('should ignore export in multi-line comment', () => {
-      // Arrange
-      const code = dedent`
-        /**
-         * @example
-         *   export * from './utils.mjs'
-         */
-      `
+  it('should ignore match in multi-line comment', () => {
+    // Arrange
+    const code = dedent`
+      /**
+       * @example
+       *   export * from './utils.mjs'
+       */
+    `
 
-      // Act + Expect
-      expect(TEST_SUBJECT.test(code)).to.be.false
-    })
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
 
-    it('should ignore export in single-line comment', () => {
-      expect(TEST_SUBJECT.test('// export { foo } from "./f.mjs"')).to.be.false
-    })
+  it('should ignore match in single-line comment', () => {
+    expect(TEST_SUBJECT.test('// export { foo } from "./f.mjs"')).to.be.false
   })
 
   describe('exports', () => {
@@ -52,7 +49,7 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named export(s) in single-line statement', () => {
@@ -64,7 +61,7 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named type export(s) in multi-line statement', () => {
@@ -82,7 +79,7 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named type export(s) in single-line statement', () => {
@@ -94,7 +91,7 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match namespace export', () => {
@@ -103,7 +100,7 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match namespace export with alias', () => {
@@ -115,7 +112,7 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 })

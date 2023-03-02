@@ -38,7 +38,6 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named export(s) in
     "specifier": "./lib",
     "type": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -53,7 +52,6 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named export(s) in
     "specifier": "#src",
     "type": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -80,7 +78,6 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named type export(
     "specifier": "@flex-development/tutils",
     "type": "type",
   },
-  "index": 0,
 }
 `;
 
@@ -95,7 +92,6 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match named type export(
     "specifier": "./options",
     "type": "type",
   },
-  "index": 0,
 }
 `;
 
@@ -110,7 +106,6 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match namespace export 1
     "specifier": "./interfaces",
     "type": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -125,6 +120,5 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match namespace export w
     "specifier": "./constants",
     "type": undefined,
   },
-  "index": 0,
 }
 `;

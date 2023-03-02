@@ -11,7 +11,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export defau
     "kind": "class",
     "modifiers": "abstract",
   },
-  "index": 0,
 }
 `;
 
@@ -26,7 +25,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export defau
     "kind": "class",
     "modifiers": "abstract",
   },
-  "index": 0,
 }
 `;
 
@@ -41,7 +39,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export defau
     "kind": "class",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -56,7 +53,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > class > should match export defau
     "kind": "class",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -71,7 +67,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > const enum > should match export 
     "kind": "const enum",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -86,7 +81,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > enum > should match export defaul
     "kind": "enum",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -101,7 +95,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > expressions > should match export
     "kind": undefined,
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -116,7 +109,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > expressions > should match export
     "kind": undefined,
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -131,7 +123,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > expressions > should match export
     "kind": undefined,
     "modifiers": "async",
   },
-  "index": 0,
 }
 `;
 
@@ -146,7 +137,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export de
     "kind": "function",
     "modifiers": "async",
   },
-  "index": 0,
 }
 `;
 
@@ -161,7 +151,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export de
     "kind": "function",
     "modifiers": "async",
   },
-  "index": 0,
 }
 `;
 
@@ -176,7 +165,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export de
     "kind": "function",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -191,7 +179,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function > should match export de
     "kind": "function",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -206,7 +193,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export d
     "kind": "function*",
     "modifiers": "async",
   },
-  "index": 0,
 }
 `;
 
@@ -221,7 +207,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export d
     "kind": "function*",
     "modifiers": "async",
   },
-  "index": 0,
 }
 `;
 
@@ -236,7 +221,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export d
     "kind": "function*",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -251,7 +235,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > function* > should match export d
     "kind": "function*",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -266,7 +249,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > interface > should match export d
     "kind": "interface",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -281,7 +263,6 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > namespace > should match export d
     "kind": "namespace",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;
 
@@ -296,6 +277,5 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > type > should match export defaul
     "kind": "type",
     "modifiers": undefined,
   },
-  "index": 0,
 }
 `;

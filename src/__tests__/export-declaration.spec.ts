@@ -12,23 +12,21 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
-  describe('comments', () => {
-    it('should ignore export in multi-line comment', () => {
-      // Arrange
-      const code = dedent`
-        /**
-         * @example
-         *   export const five = 5
-         */
-      `
+  it('should ignore match in multi-line comment', () => {
+    // Arrange
+    const code = dedent`
+      /**
+       * @example
+       *   export const five = 5
+       */
+    `
 
-      // Act + Expect
-      expect(TEST_SUBJECT.test(code)).to.be.false
-    })
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
 
-    it('should ignore export in single-line comment', () => {
-      expect(TEST_SUBJECT.test('// export function foo() {}')).to.be.false
-    })
+  it('should ignore match in single-line comment', () => {
+    expect(TEST_SUBJECT.test('// export function foo() {}')).to.be.false
   })
 
   describe('exports', () => {
@@ -39,7 +37,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export class [exports]', () => {
@@ -48,7 +46,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export declare abstract class [exports]', () => {
@@ -57,7 +55,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -68,7 +66,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export declare const enum [exports]', () => {
@@ -77,7 +75,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -95,7 +93,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.empty
-        expect(result.map(res => omit(res, ['input']))).toMatchSnapshot()
+        expect(result.map(re => omit(re, ['index', 'input']))).toMatchSnapshot()
       })
 
       it('should match export declare const [exports]', () => {
@@ -107,7 +105,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -118,7 +116,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export enum [exports]', () => {
@@ -127,7 +125,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -138,7 +136,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export declare async function [exports]', () => {
@@ -150,7 +148,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export declare function [exports]', () => {
@@ -159,7 +157,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export function [exports]', () => {
@@ -168,7 +166,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -182,7 +180,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export declare async function* [exports]', () => {
@@ -194,7 +192,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export declare function* [exports]', () => {
@@ -206,7 +204,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export function* [exports]', () => {
@@ -215,7 +213,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -226,7 +224,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export interface [exports]', () => {
@@ -235,7 +233,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -249,7 +247,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export let [exports]', () => {
@@ -261,7 +259,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -272,7 +270,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export namespace [exports]', () => {
@@ -281,7 +279,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -292,7 +290,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export type [exports]', () => {
@@ -301,7 +299,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -315,7 +313,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export var [exports]', () => {
@@ -327,7 +325,7 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
   })

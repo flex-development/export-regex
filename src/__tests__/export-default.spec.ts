@@ -3,7 +3,6 @@
  * @module export-regex/tests/unit/default
  */
 
-import { omit } from 'radash'
 import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../export-default'
 
@@ -12,23 +11,21 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
-  describe('comments', () => {
-    it('should ignore export in multi-line comment', () => {
-      // Arrange
-      const code = dedent`
-        /**
-         * @example
-         *   export default foo
-         */
-      `
+  it('should ignore match in multi-line comment', () => {
+    // Arrange
+    const code = dedent`
+      /**
+       * @example
+       *   export default foo
+       */
+    `
 
-      // Act + Expect
-      expect(TEST_SUBJECT.test(code)).to.be.false
-    })
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
 
-    it('should ignore export in single-line comment', () => {
-      expect(TEST_SUBJECT.test('// export default foo')).to.be.false
-    })
+  it('should ignore match in single-line comment', () => {
+    expect(TEST_SUBJECT.test('// export default foo')).to.be.false
   })
 
   describe('exports', () => {
@@ -39,7 +36,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default abstract class', () => {
@@ -48,7 +45,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default class [identifier]', () => {
@@ -57,7 +54,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default class', () => {
@@ -66,7 +63,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -77,7 +74,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -88,7 +85,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -99,7 +96,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default', () => {
@@ -108,7 +105,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default async', () => {
@@ -117,7 +114,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -131,7 +128,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default async function', () => {
@@ -140,7 +137,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default function [identifier]', () => {
@@ -149,7 +146,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default function', () => {
@@ -158,7 +155,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -172,7 +169,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default async function*', () => {
@@ -181,7 +178,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default function* [identifier]', () => {
@@ -193,7 +190,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
 
       it('should match export default function*', () => {
@@ -202,7 +199,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -213,7 +210,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -224,7 +221,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
 
@@ -235,7 +232,7 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
 
         // Expect
         expect(result).to.not.be.null
-        expect(omit(result!, ['input'])).toMatchSnapshot()
+        expect(result).toMatchSnapshot()
       })
     })
   })

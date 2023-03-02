@@ -3,7 +3,6 @@
  * @module export-regex/tests/unit/list
  */
 
-import { omit } from 'radash'
 import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../export-list'
 
@@ -12,23 +11,21 @@ describe('unit:EXPORT_LIST_REGEX', () => {
     TEST_SUBJECT.lastIndex = 0
   })
 
-  describe('comments', () => {
-    it('should ignore export in multi-line comment', () => {
-      // Arrange
-      const code = dedent`
-        /**
-         * @example
-         *   export { name1, name2, name3 }
-         */
-      `
+  it('should ignore match in multi-line comment', () => {
+    // Arrange
+    const code = dedent`
+      /**
+       * @example
+       *   export { name1, name2, name3 }
+       */
+    `
 
-      // Act + Expect
-      expect(TEST_SUBJECT.test(code)).to.be.false
-    })
+    // Act + Expect
+    expect(TEST_SUBJECT.test(code)).to.be.false
+  })
 
-    it('should ignore export in single-line comment', () => {
-      expect(TEST_SUBJECT.test('// export { foo, bar }')).to.be.false
-    })
+  it('should ignore match in single-line comment', () => {
+    expect(TEST_SUBJECT.test('// export { foo, bar }')).to.be.false
   })
 
   describe('exports', () => {
@@ -52,7 +49,7 @@ describe('unit:EXPORT_LIST_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named export(s) in single-line statement', () => {
@@ -64,7 +61,7 @@ describe('unit:EXPORT_LIST_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named type export(s) in multi-line statement', () => {
@@ -82,7 +79,7 @@ describe('unit:EXPORT_LIST_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
 
     it('should match named type export(s) in single-line statement', () => {
@@ -91,7 +88,7 @@ describe('unit:EXPORT_LIST_REGEX', () => {
 
       // Expect
       expect(result).to.not.be.null
-      expect(omit(result!, ['input'])).toMatchSnapshot()
+      expect(result).toMatchSnapshot()
     })
   })
 })
