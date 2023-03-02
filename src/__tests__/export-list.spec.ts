@@ -3,6 +3,7 @@
  * @module export-regex/tests/unit/list
  */
 
+import { omit } from 'radash'
 import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../export-list'
 
@@ -106,6 +107,28 @@ describe('unit:EXPORT_LIST_REGEX', () => {
       // Expect
       expect(result).to.not.be.null
       expect(result).toMatchSnapshot()
+    })
+
+    it('should match nested export statement(s) in declaration file', () => {
+      // Arrange
+      const code = dedent`
+        declare module 'module-name' {
+          export {
+            DEFAULTS,
+            plugin as default,
+            type Options
+          }
+          export type { Config, Result }
+          export type { default as Options }
+        }
+      `
+
+      // Act
+      const result = [...code.matchAll(TEST_SUBJECT)]
+
+      // Expect
+      expect(result).to.not.be.empty
+      expect(result.map(res => omit(res, ['index', 'input']))).toMatchSnapshot()
     })
   })
 })

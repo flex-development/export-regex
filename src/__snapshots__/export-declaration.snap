@@ -346,6 +346,33 @@ exports[`unit:EXPORT_DECLARATION_REGEX > exports > namespace > should match expo
 }
 `;
 
+exports[`unit:EXPORT_DECLARATION_REGEX > exports > should match nested export statement(s) in declaration file 1`] = `
+[
+  {
+    "0": "export declare abstract class Building",
+    "1": "declare abstract",
+    "2": "class",
+    "3": "Building",
+    "groups": {
+      "declaration": "class",
+      "exports": "Building",
+      "modifiers": "declare abstract",
+    },
+  },
+  {
+    "0": "export declare class House",
+    "1": "declare",
+    "2": "class",
+    "3": "House",
+    "groups": {
+      "declaration": "class",
+      "exports": "House",
+      "modifiers": "declare",
+    },
+  },
+]
+`;
+
 exports[`unit:EXPORT_DECLARATION_REGEX > exports > type > should match export declare type [exports] 1`] = `
 {
   "0": "export declare type Options",

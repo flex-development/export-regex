@@ -30,6 +30,23 @@ describe('unit:EXPORT_DECLARATION_REGEX', () => {
   })
 
   describe('exports', () => {
+    it('should match nested export statement(s) in declaration file', () => {
+      // Arrange
+      const code = dedent`
+        declare module 'module-name' {
+          export declare abstract class Building {}
+          export declare class House extends Building {}
+        }
+      `
+
+      // Act
+      const result = [...code.matchAll(TEST_SUBJECT)]
+
+      // Expect
+      expect(result).to.not.be.empty
+      expect(result.map(res => omit(res, ['index', 'input']))).toMatchSnapshot()
+    })
+
     describe('class', () => {
       it('should match export abstract class [exports]', () => {
         // Act

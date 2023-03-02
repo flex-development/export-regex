@@ -29,6 +29,22 @@ describe('unit:EXPORT_DEFAULT_REGEX', () => {
   })
 
   describe('exports', () => {
+    it('should match nested export statement in declaration file', () => {
+      // Arrange
+      const code = dedent`
+        declare module 'module-name' {
+          export default class ClassName { /* … */ }
+        }
+      `
+
+      // Act
+      const result = TEST_SUBJECT.exec(code)
+
+      // Expect
+      expect(result).to.not.be.null
+      expect(result).toMatchSnapshot()
+    })
+
     describe('class', () => {
       it('should match export default abstract class [identifier]', () => {
         // Act

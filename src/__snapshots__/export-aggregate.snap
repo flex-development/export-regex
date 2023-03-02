@@ -122,3 +122,75 @@ exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match namespace export w
   },
 }
 `;
+
+exports[`unit:EXPORT_AGGREGATE_REGEX > exports > should match nested export statement(s) in declaration file 1`] = `
+[
+  {
+    "0": "export { default } from './make'",
+    "1": undefined,
+    "2": "{ default }",
+    "3": "./make",
+    "groups": {
+      "exports": "{ default }",
+      "specifier": "./make",
+      "type": undefined,
+    },
+  },
+  {
+    "0": "export {
+    DEFAULTS,
+    plugin as default,
+    type Options
+  } from './plugin'",
+    "1": undefined,
+    "2": "{
+    DEFAULTS,
+    plugin as default,
+    type Options
+  }",
+    "3": "./plugin",
+    "groups": {
+      "exports": "{
+    DEFAULTS,
+    plugin as default,
+    type Options
+  }",
+      "specifier": "./plugin",
+      "type": undefined,
+    },
+  },
+  {
+    "0": "export type { Config, Result } from './interfaces'",
+    "1": "type",
+    "2": "{ Config, Result }",
+    "3": "./interfaces",
+    "groups": {
+      "exports": "{ Config, Result }",
+      "specifier": "./interfaces",
+      "type": "type",
+    },
+  },
+  {
+    "0": "export type { default as Options } from './options'",
+    "1": "type",
+    "2": "{ default as Options }",
+    "3": "./options",
+    "groups": {
+      "exports": "{ default as Options }",
+      "specifier": "./options",
+      "type": "type",
+    },
+  },
+  {
+    "0": "export type Foo from '#foo'",
+    "1": "type",
+    "2": "Foo",
+    "3": "#foo",
+    "groups": {
+      "exports": "Foo",
+      "specifier": "#foo",
+      "type": "type",
+    },
+  },
+]
+`;

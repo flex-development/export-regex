@@ -330,6 +330,6 @@
  * @const {RegExp} EXPORT_DECLARATION_REGEX
  */
 const EXPORT_DECLARATION_REGEX: RegExp =
-  /(?<=^|[\n;])export\s*(?<modifiers>(?:\s*declare|\s*abstract|\s*async)+)?\s*(?<declaration>class|const +enum|const|enum|function\*?|interface|let|namespace|type(?! *\{)|var)\s+(?<exports>(?:[$_\p{ID_Start}][$\u200C\u200D\p{ID_Continue}]*(?=[\s=:;/({])(?!.*?,))|(?:[\w\t\n\r .,:$'"=-]+)|(?:[{[][\w\t\n\r .,:$'"-]+[}\]]))(?:\s*=\s*[$_\p{ID_Start}][$\u200C\u200D\p{ID_Continue}]*)?/gu
+  /(?<=^|[\n;](?:[\t ]*(?:\w+ )?)?)export\s*(?<modifiers>(?:\s*declare|\s*abstract|\s*async)+)?\s*(?<declaration>class|const +enum|const|enum|function\*?|interface|let|namespace|type(?! *\{)|var)\s+(?<exports>(?:[$_\p{ID_Start}][$\u200C\u200D\p{ID_Continue}]*(?=[\s=:;/({])(?!.*?,))|(?:[\w\t\n\r .,:$'"=-]+)|(?:[{[][\w\t\n\r .,:$'"-]+[}\]]))(?:\s*=\s*[$_\p{ID_Start}][$\u200C\u200D\p{ID_Continue}]*)?/gu
 
 export default EXPORT_DECLARATION_REGEX

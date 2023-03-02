@@ -86,3 +86,47 @@ exports[`unit:EXPORT_LIST_REGEX > exports > should match named type export(s) in
   },
 }
 `;
+
+exports[`unit:EXPORT_LIST_REGEX > exports > should match nested export statement(s) in declaration file 1`] = `
+[
+  {
+    "0": "export {
+    DEFAULTS,
+    plugin as default,
+    type Options
+  }",
+    "1": undefined,
+    "2": "{
+    DEFAULTS,
+    plugin as default,
+    type Options
+  }",
+    "groups": {
+      "exports": "{
+    DEFAULTS,
+    plugin as default,
+    type Options
+  }",
+      "type": undefined,
+    },
+  },
+  {
+    "0": "export type { Config, Result }",
+    "1": "type",
+    "2": "{ Config, Result }",
+    "groups": {
+      "exports": "{ Config, Result }",
+      "type": "type",
+    },
+  },
+  {
+    "0": "export type { default as Options }",
+    "1": "type",
+    "2": "{ default as Options }",
+    "groups": {
+      "exports": "{ default as Options }",
+      "type": "type",
+    },
+  },
+]
+`;

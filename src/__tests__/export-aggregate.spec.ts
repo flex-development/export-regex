@@ -3,6 +3,7 @@
  * @module export-regex/tests/unit/aggregate
  */
 
+import { omit } from 'radash'
 import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../export-aggregate'
 
@@ -113,6 +114,30 @@ describe('unit:EXPORT_AGGREGATE_REGEX', () => {
       // Expect
       expect(result).to.not.be.null
       expect(result).toMatchSnapshot()
+    })
+
+    it('should match nested export statement(s) in declaration file', () => {
+      // Arrange
+      const code = dedent`
+        declare module 'module-name' {
+          export { default } from './make'
+          export {
+            DEFAULTS,
+            plugin as default,
+            type Options
+          } from './plugin'
+          export type { Config, Result } from './interfaces'
+          export type { default as Options } from './options'
+          export type Foo from '#foo'
+        }
+      `
+
+      // Act
+      const result = [...code.matchAll(TEST_SUBJECT)]
+
+      // Expect
+      expect(result).to.not.be.empty
+      expect(result.map(res => omit(res, ['index', 'input']))).toMatchSnapshot()
     })
   })
 })

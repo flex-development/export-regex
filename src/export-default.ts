@@ -296,6 +296,6 @@
  * @const {RegExp} EXPORT_DEFAULT_REGEX
  */
 const EXPORT_DEFAULT_REGEX: RegExp =
-  /(?<=^|[\n;])export\s*default(?:\s*(?<modifiers>(?:abstract(?= *class)|async(?=[\S ]))+))?(?:\s*(?<kind>class|const +enum|enum|function\*?(?=[ (])|interface|namespace|type(?! *\{)))?(?:\s*(?<exports>[$_\p{ID_Start}][$\u200C\u200D\p{ID_Continue}]*)(?=(?:\s*[\n({;])|(?:\s*=\s*\{)|$))?/gu
+  /(?<=^|[\n;](?:[\t ]*(?:\w+ )?)?)export\s*default(?:\s*(?<modifiers>(?:abstract(?= *class)|async(?=[\S ]))+))?(?:\s*(?<kind>class|const +enum|enum|function\*?(?=[ (])|interface|namespace|type(?! *\{)))?(?:\s*(?<exports>[$_\p{ID_Start}][$\u200C\u200D\p{ID_Continue}]*)(?=(?:\s*[\n({;])|(?:\s*=\s*\{)|$))?/gu
 
 export default EXPORT_DEFAULT_REGEX

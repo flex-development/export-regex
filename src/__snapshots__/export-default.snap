@@ -266,6 +266,20 @@ exports[`unit:EXPORT_DEFAULT_REGEX > exports > namespace > should match export d
 }
 `;
 
+exports[`unit:EXPORT_DEFAULT_REGEX > exports > should match nested export statement in declaration file 1`] = `
+{
+  "0": "export default class ClassName",
+  "1": undefined,
+  "2": "class",
+  "3": "ClassName",
+  "groups": {
+    "exports": "ClassName",
+    "kind": "class",
+    "modifiers": undefined,
+  },
+}
+`;
+
 exports[`unit:EXPORT_DEFAULT_REGEX > exports > type > should match export default type [identifier] 1`] = `
 {
   "0": "export default type Options",
