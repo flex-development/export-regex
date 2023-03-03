@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/flex-development/export-regex/compare/1.0.1...1.0.2) (2023-03-02)
+
+
+### :bug: Fixes
+
+* **regex:** [aggregate] ignore list `export` statement matches ([ca54026](https://github.com/flex-development/export-regex/commit/ca54026dcb771e97d584a9ddd9387436e28ee9c2))
+* **regex:** [list] ignore nested aggregate `export` statement matches ([3ea3f4b](https://github.com/flex-development/export-regex/commit/3ea3f4b22e1cc0338a85a58f4c8953bf2ba49cb9))
+
 ## [1.0.1](https://github.com/flex-development/export-regex/compare/1.0.0...1.0.1) (2023-03-02)
 
 

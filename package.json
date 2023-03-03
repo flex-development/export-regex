@@ -1,7 +1,7 @@
 {
   "name": "@flex-development/export-regex",
   "description": "Export statement regex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "ecmascript",
     "export",
