@@ -71,6 +71,6 @@
  * @const {RegExp} EXPORT_AGGREGATE_REGEX
  */
 const EXPORT_AGGREGATE_REGEX: RegExp =
-  /(?<=^|[\n;](?:[\t ]*(?:\w+ )?)?)export(?:(?:\s+(?<type>type)\s*)|\s*)(?<exports>(?:\*(?:\s+as\s+\S+)?)|\S+|(?:{[\w\t\n\r "$'*,./{}-]+?}))\s*from\s*["']\s*(?<specifier>(?:(?<='\s*)[^']*[^\s'](?=\s*'))|(?:(?<="\s*)[^"]*[^\s"](?=\s*")))\s*["']/g
+  /(?<=^[\t ]*|[\n;](?:[\t ]*(?:\w+ )?)?)export(?:(?: *(?<type>type) *)|[\t\n ]*)(?<exports>(?:\*(?: +as +\S+)?)|\S+|(?:{[\w\t\n\r "$'*,./-]+?}))[\t ]*from[\t ]*["']\s*(?<specifier>(?:(?<=' *)[^']*[^\s'](?= *'))|(?:(?<=" *)[^"]*[^\s"](?= *"))) *["']/g
 
 export default EXPORT_AGGREGATE_REGEX
