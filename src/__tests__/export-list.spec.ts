@@ -118,8 +118,34 @@ describe('unit:EXPORT_LIST_REGEX', () => {
             plugin as default,
             type Options
           }
-          export type { Config, Result }
+          export { defineBuildConfig, type BuildConfig } from "#src"
+          export type {
+            JsonObject,
+            LiteralUnion,
+            Nullable
+          } from '@flex-development/tutils'
+          export {
+            addFive,
+            addFour,
+            addThree,
+            addTwo,
+            squareFive,
+            squareFour,
+            squareThree,
+            squareTwo
+          } from './lib'
+          export * as constants from "./constants"
           export type { default as Options }
+          export type { default as Options } from "./options"
+          export * from './utils'
+          export interface User {}
+          export abstract class House {}
+          export const { name1, name2: bar } = o;
+          export const [ name1, name2 ] = array;
+          export default async function foo() {}
+          export default foo
+          export default 1 + 1;
+          export type { Config, Result }
         }
       `
 

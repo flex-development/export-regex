@@ -111,20 +111,20 @@ exports[`unit:EXPORT_LIST_REGEX > exports > should match nested export statement
     },
   },
   {
-    "0": "export type { Config, Result }",
-    "1": "type",
-    "2": "{ Config, Result }",
-    "groups": {
-      "exports": "{ Config, Result }",
-      "type": "type",
-    },
-  },
-  {
     "0": "export type { default as Options }",
     "1": "type",
     "2": "{ default as Options }",
     "groups": {
       "exports": "{ default as Options }",
+      "type": "type",
+    },
+  },
+  {
+    "0": "export type { Config, Result }",
+    "1": "type",
+    "2": "{ Config, Result }",
+    "groups": {
+      "exports": "{ Config, Result }",
       "type": "type",
     },
   },
