@@ -3,7 +3,7 @@
  * @module export-regex/tests/unit/declaration
  */
 
-import { omit } from 'radash'
+import { omit } from '@flex-development/tutils'
 import { dedent } from 'ts-dedent'
 import TEST_SUBJECT from '../export-declaration'
 
