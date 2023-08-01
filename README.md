@@ -65,12 +65,12 @@ yarn add @flex-development/export-regex@flex-development/export-regex
 
 Suppose we have the following module:
 
-```typescript
+```ts
 import * as regexp from '@flex-development/export-regex'
-import { omit } from 'radash'
+import { at, omit, select, type Times } from '@flex-development/tutils'
 import { dedent } from 'ts-dedent'
 
-const code: [string, string, string, string] = [
+const code: Times<4, string> = [
   dedent`
     export { defineBuildConfig, type BuildConfig } from "#src"
     export type {
@@ -126,13 +126,13 @@ const code: [string, string, string, string] = [
 ]
 
 const print = (matches: IterableIterator<RegExpMatchArray>): void => {
-  console.debug([...matches].map(match => omit(match, ['input'])))
+  console.debug(select([...matches], null, match => omit(match, ['input'])))
 }
 
-print(code[0].matchAll(regexp.EXPORT_AGGREGATE_REGEX))
-print(code[1].matchAll(regexp.EXPORT_DECLARATION_REGEX))
-print(code[2].matchAll(regexp.EXPORT_DEFAULT_REGEX))
-print(code[3].matchAll(regexp.EXPORT_LIST_REGEX))
+print(at(code, 0).matchAll(regexp.EXPORT_AGGREGATE_REGEX))
+print(at(code, 1).matchAll(regexp.EXPORT_DECLARATION_REGEX))
+print(at(code, 2).matchAll(regexp.EXPORT_DEFAULT_REGEX))
+print(at(code, 3).matchAll(regexp.EXPORT_LIST_REGEX))
 ```
 
 ...running that yields:
