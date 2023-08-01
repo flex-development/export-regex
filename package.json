@@ -105,7 +105,6 @@
     "conventional-changelog-conventionalcommits": "6.1.0",
     "conventional-changelog-core": "5.0.2",
     "conventional-changelog-writer": "6.0.1",
-    "conventional-commits-parser": "3.2.4",
     "conventional-recommended-bump": "7.0.1",
     "cross-env": "7.0.3",
     "cspell": "6.31.2",
